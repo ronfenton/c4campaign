@@ -1,0 +1,19 @@
+.expand-box {
+  border:1px solid var(--primary-2);
+}
+
+.collapsed {
+
+}
+
+.collapsed::before {
+  content: "[Expand >] "
+}
+
+.expanded {
+  background-color:var(--primary-1)
+}
+
+.expanded::before {
+  content: "[Close x] "
+}

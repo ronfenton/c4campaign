@@ -1,4 +1,5 @@
 import React from "react"
+import "./Expand.css"
 
 const Expand = ({children,title}) => {
 
@@ -7,9 +8,13 @@ const Expand = ({children,title}) => {
   return (
     <div>
       <div onClick={()=>setVisible(!visible)}>
-        <b>{title}</b>
+        <b style={{cursor:"context-menu"}}>
+          {visible ? "[Close x] " : "[Expand >] "}
+          {title}
+        </b>
       </div>
       {visible ? <div>
+        <hr/>
         {children}
       </div> : null}
     </div>
